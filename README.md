@@ -39,8 +39,9 @@ s1 = cfg.GetValue("node", "url", "").(string)
 
 // result is：  http://www.example.com
 
-//注意下面语句.(type)的转换类型一定要和defaultValue对应，否则就会报错
-value1 := cfg.GetValue("", "address", 0).(string)  
+//注意GetValue后做类型转换.(type)一定要和defaultValue对应，否则就会报错
+
+value1 := cfg.GetValue("", "address", "").(string)  
 
 fmt.Println(value1)
 
